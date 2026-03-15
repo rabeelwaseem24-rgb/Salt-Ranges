@@ -217,9 +217,9 @@ export default function HomeClient() {
 
       {/* Final CTA */}
       <section className="container" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
-        <div className={styles.ctaSection} style={{ background: 'var(--gradient-vibrant)', borderRadius: '32px', padding: '120px 40px' }}>
-          <h2 className={styles.ctaTitle} style={{ fontWeight: 800, letterSpacing: '-0.03em' }}>Ready to Scale?</h2>
-          <Link href="/contact" className="btn-primary" style={{ background: 'var(--primary)', padding: '16px 48px', fontSize: '1.1rem', borderRadius: '100px' }}>
+        <div className={styles.ctaSection}>
+          <h2 className={styles.ctaTitle}>Ready to Scale?</h2>
+          <Link href="/contact" className={styles.ctaButton}>
             Book Strategic Consultation
           </Link>
         </div>
