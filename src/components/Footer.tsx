@@ -1,18 +1,4 @@
-PS D:\Rabeel projects\salt_ranges> git commit -m "first commit"
-fatal: detected dubious ownership in repository at 'D:/Rabeel projects/salt_ranges'
-'D:/Rabeel projects/salt_ranges' is on a file system that does not record ownership
-To add an exception for this directory, call:
-
-        git config --global --add safe.directory 'D:/Rabeel projects/salt_ranges'
-PS D:\Rabeel projects\salt_ranges> git branch -M main
-fatal: detected dubious ownership in repository at 'D:/Rabeel projects/salt_ranges'
-'D:/Rabeel projects/salt_ranges' is on a file system that does not record ownership
-To add an exception for this directory, call:
-
-        git config --global --add safe.directory 'D:/Rabeel projects/salt_ranges'
-PS D:\Rabeel projects\salt_ranges> git config --global --add
-error: wrong number of arguments, should be 2
-PS D:\Rabeel projects\salt_ranges> import Link from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 
