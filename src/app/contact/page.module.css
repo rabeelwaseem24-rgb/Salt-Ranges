@@ -1,0 +1,185 @@
+.header {
+  padding: 180px 20px 80px;
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: var(--text-inverse);
+}
+
+.headerTitle span {
+  color: var(--secondary);
+}
+
+.headerSubtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 120px 15px 60px;
+  }
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+  .headerSubtitle {
+    font-size: 1rem;
+  }
+}
+
+/* --- Section Structure --- */
+.pageLayout {
+  display: grid;
+  gap: 50px;
+  padding: 80px 20px;
+}
+
+@media (min-width: 992px) {
+  .pageLayout {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+/* --- Case Studies --- */
+.caseStudiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.caseStudyCard {
+  background: #ffffff;
+  border-left: 4px solid var(--accent);
+  padding: 30px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.caseStudyCard:hover {
+  transform: translateX(10px);
+}
+
+.caseStudyTitle {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.caseStudyDesc {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* --- Contact Info --- */
+.contactInfoBox {
+  margin-bottom: 40px;
+}
+
+.contactInfoTitle {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.infoIcon {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.infoText h4 {
+  margin: 0 0 5px;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.infoText p {
+  margin: 0;
+  color: var(--text-light);
+}
+
+.infoText a {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.infoText a:hover {
+  color: var(--accent);
+}
+
+/* --- Contact Form --- */
+.formContainer {
+  background: var(--background-dark);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .caseStudyCard {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .formContainer {
+    padding: 20px 15px;
+  }
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formLabel {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-family: var(--font-heading);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  background-color: #ffffff;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.1);
+}
+
+.formTextarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+}

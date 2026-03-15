@@ -1,0 +1,128 @@
+.header {
+  padding: 160px 20px 80px;
+  background-color: var(--primary);
+  color: var(--text-inverse);
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: var(--text-inverse);
+}
+
+.headerTitle span {
+  color: var(--secondary);
+}
+
+.headerSubtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 120px 15px 60px;
+  }
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+  .headerSubtitle {
+    font-size: 1rem;
+  }
+}
+
+/* --- Services Grid --- */
+.servicesGrid {
+  display: grid;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.serviceCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-color: var(--secondary);
+}
+
+.serviceIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.serviceDesc {
+  color: var(--text-light);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* --- Industries Section --- */
+.industriesSection {
+  background: var(--background-dark);
+}
+
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+  .industriesGrid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .industriesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.industryTag {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.industryTag:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+  border-color: var(--primary);
+}
