@@ -278,7 +278,9 @@
 }
 
 .ctaButton {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--primary);
   color: white;
   padding: 16px 48px;
@@ -289,6 +291,7 @@
   position: relative;
   z-index: 2;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .ctaButton:hover {

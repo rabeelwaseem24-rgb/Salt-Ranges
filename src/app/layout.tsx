@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     title: "Salt Ranges | Strategic Debt Solutions",
     description: "Multinational financial advisory firm specializing in debt and capital raising.",
   },
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
