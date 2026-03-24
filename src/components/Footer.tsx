@@ -21,7 +21,7 @@ export default function Footer() {
             />
           </Link>
           <p className={styles.description}>
-            Empowering businesses with strategic financial solutions, access to capital, and long-term investor relationship management.
+            Empowering businesses with strategic financing, access to capital, and lasting investor relationships.
           </p>
         </div>
 
@@ -38,13 +38,13 @@ export default function Footer() {
         <div className={styles.column}>
           <h3 className={styles.heading}>Contact Us</h3>
           <div className={styles.contactItem}>
-            📍 Meydan Free Zone, Dubai
+            📍 Meydan Free Zone
           </div>
           <div className={styles.contactItem}>
-            📞 +1 368 993 3609
+            📞 +971 50 210 6095
           </div>
           <div className={styles.contactItem}>
-            ✉️ info@salt-ranges.com
+            ✉️ haroon@salt-ranges.com
           </div>
         </div>
 

@@ -69,11 +69,11 @@ export default function ContactClient() {
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0AFunding Required: ${formData.funding}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
 
     // Redirect to mail client
-    window.location.href = `mailto:info@salt-ranges.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:haroon@salt-ranges.com?subject=${subject}&body=${body}`;
   };
 
   const caseStudies = [
-    { title: "$2M Working Capital Financing", desc: "Secured for a rapidly growing trading company in Dubai, allowing them to expand operations and handle larger transaction volumes seamlessly." },
+    { title: "$2M Working Capital Financing", desc: "Secured for a rapidly growing trading company, allowing them to expand operations and handle larger transaction volumes seamlessly." },
     { title: "Commercial Property Acquisition", desc: "Complex financing structured for a leading real estate developer to acquire prime commercial property in the UAE." },
     { title: "Strategic Debt Restructuring", desc: "Complete financial reorganization and debt restructuring for a major manufacturing business, improving cash flow by 40%." },
   ];
@@ -85,7 +85,7 @@ export default function ContactClient() {
         <div className="container">
           <h1 className={styles.headerTitle}>Contact & <span>Case Studies</span></h1>
           <p className={styles.headerSubtitle}>
-            Review our proven track record of successful financing and connect with our advisors in Dubai or Canada to discuss your capital needs.
+            Review our proven track record of successful financing and connect with our advisors to discuss your capital needs.
           </p>
         </div>
       </section>
@@ -101,15 +101,15 @@ export default function ContactClient() {
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📍</div>
               <div className={styles.infoText}>
-                <h4>Dubai Office</h4>
-                <p>Meydan Free Zone, Dubai</p>
+                <h4>Our Office</h4>
+                <p>Meydan Free Zone</p>
               </div>
             </div>
 
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📞</div>
               <div className={styles.infoText}>
-                <p>+1 368 993 3609</p>
+                <p>+971 50 210 6095</p>
               </div>
             </div>
 
@@ -117,8 +117,7 @@ export default function ContactClient() {
               <div className={styles.infoIcon}>✉️</div>
               <div className={styles.infoText}>
                 <h4>Email Us</h4>
-                <p><a href="mailto:info@salt-ranges.com">info@salt-ranges.com</a></p>
-                <p><a href="mailto:Haroon@salt-ranges.com">Haroon@salt-ranges.com</a></p>
+                <p><a href="mailto:haroon@salt-ranges.com">haroon@salt-ranges.com</a></p>
               </div>
             </div>
           </div>

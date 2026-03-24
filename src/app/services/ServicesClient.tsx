@@ -82,10 +82,11 @@ export default function ServicesClient() {
     "Startups & SMEs",
     "Construction Companies",
     "Manufacturing",
-    "Healthcare",
+    "Healthcare & Education",
     "Hospitality",
     "Logistics",
-    "Retail Businesses"
+    "Retail Businesses",
+    "Oil & Gas"
   ];
 
   return (
@@ -95,7 +96,7 @@ export default function ServicesClient() {
         <div className="container">
           <h1 className={styles.headerTitle}>Our <span>Services</span></h1>
           <p className={styles.headerSubtitle}>
-            Comprehensive, strategic, and intelligent capital solutions tailored to complex business scenarios in Dubai and global markets.
+            Comprehensive capital solutions across different industries globally.
           </p>
         </div>
       </section>
@@ -138,7 +139,7 @@ export default function ServicesClient() {
       {/* CTA */}
       <section className="section" style={{ textAlign: 'center' }}>
         <div className="container" style={{ background: 'var(--primary)', padding: '60px 20px', borderRadius: '15px' }}>
-          <h2 style={{ color: 'white', marginBottom: '20px' }}>Need Industry-Specific Capital in Dubai?</h2>
+          <h2 style={{ color: 'white', marginBottom: '20px' }}>Need Industry-Specific Capital?</h2>
           <p style={{ color: '#cbd5e1', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
             Our advisory team is ready to listen to your unique requirements and find the perfect structured debt or equity solution.
           </p>

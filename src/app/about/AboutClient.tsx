@@ -65,7 +65,7 @@ export default function AboutClient() {
         <div className="container">
           <h1 className={styles.headerTitle}>About Salt Ranges</h1>
           <p className={styles.headerSubtitle}>
-            We are a multinational advisory firm helping businesses access capital, bank financing, structure financial strategies, and unlock growth opportunities.
+            We are a multinational financial advisory firm providing access to bank financing, alternative capital, and equity investment, enabling businesses to scale and unlock growth opportunities.
           </p>
           
           <div className={styles.statsContainer}>
@@ -78,8 +78,8 @@ export default function AboutClient() {
               <div className={styles.statLabel}>Financing Solutions</div>
             </div>
             <div className={styles.statItem}>
-              <div className={styles.statValue}>Global</div>
-              <div className={styles.statLabel}>Partners</div>
+              <div className={styles.statValue}>USD 1 Billion +</div>
+              <div className={styles.statLabel}>Total Capital Raised</div>
             </div>
           </div>
         </div>
@@ -91,14 +91,14 @@ export default function AboutClient() {
           <div className={styles.mvBox}>
             <h2 className={styles.mvTitle}>Our Mission</h2>
             <p className={styles.mvText}>
-              To empower businesses with structured financial solutions and seamless access to strategic capital. We believe in providing actionable financial advice that leads to measurable growth, long-term stability, and success across all our international markets.
+              To help businesses grow by arranging capital they need, and let them focus on their business
             </p>
           </div>
           
           <div className={styles.mvBox} style={{ borderLeftColor: 'var(--secondary)' }}>
             <h2 className={styles.mvTitle}>Our Vision</h2>
             <p className={styles.mvText}>
-              To become a leading global financial advisory firm, seamlessly connecting ambitious businesses with vast international financing and funding opportunities, while setting the benchmark for transparency, reliability, and corporate excellence.
+              To be a leading global financial advisory, helping ambitious businesses secure capital and giving investors access to real growth opportunities.
             </p>
           </div>
         </div>
@@ -117,15 +117,23 @@ export default function AboutClient() {
               <span>HA</span>
             </div>
             <h3 className={styles.profileName}>Haroon Altaf</h3>
-            <div className={styles.profileRole}>Capital & Debt Financing Expert</div>
+            <div className={styles.profileRole}>Corporate & Investment Banker</div>
             
             <div className={styles.profileTags}>
               <span className={styles.profileTag}>Corporate Banker</span>
-              <span className={styles.profileTag}>Investment Advisor</span>
+              <span className={styles.profileTag}>Investment Banker</span>
             </div>
             
             <p style={{ marginTop: '25px', color: '#cbd5e1', lineHeight: '1.6' }}>
-              With an extensive background in structured finance and global banking, Haroon Altaf leads Salt Ranges in its mission to match businesses with critical capital and strategic resources.
+              With over 20 years of expertise across the GCC and AMEA regions, Haroon Altaf is a seasoned banking finance professional and the CEO & Founder of Salt Ranges LLC FZ. His extensive background in multinational banks’ corporate finance, debt origination, project financing, and investment advisory has positioned him as a trusted leader in the industry.
+              <br /><br />
+              Haroon specializes in structuring complex financial transactions, bringing deep expertise in bank financing, corporate debt solutions, and mergers & acquisitions. His strong grasp of both conventional and Islamic finance enables him to craft tailored financial strategies that meet the evolving needs of businesses.
+              <br /><br />
+              Over the course of his career, Haroon has successfully developed and managed multi-million-dollar portfolios, leading impactful transactions in Oil & Gas, Infrastructure, Renewable Energy, and Real Estate, Contracting, Healthcare, Education. His proficiency extends to trade and commodity finance, financing against shares, capital restructuring, and Islamic finance structures.
+              <br /><br />
+              He has played a crucial role in structured finance solutions for Greenfield projects, large-scale industrial developments, and corporate buyouts, ensuring smooth execution and stakeholder alignment. His expertise in debt capital markets (DCM), public-private partnerships (PPP), and strategic funding solutions has enabled businesses to access optimal financing channels for sustainable growth.
+              <br /><br />
+              Haroon holds an MBA in Finance, reinforcing his analytical expertise and strategic financial acumen, and remains dedicated to driving financial innovation, strategic advisory, and investment excellence in the region.
             </p>
           </div>
         </div>

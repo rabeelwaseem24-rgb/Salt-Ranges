@@ -72,28 +72,32 @@ export default function HomeClient() {
   }, { scope: container });
 
   const services = [
-    { title: "Debt Financing", icon: "🏛️", desc: "Structured debt capital fueling growth while preserving ownership and financial flexibility." },
+    { title: "Debt Financing", icon: "🏛️", desc: "Secure Bank financing for your business needs to grow, expand, and execute—without giving up equity." },
     { title: "Capital Raising", icon: "📈", desc: "Connecting businesses with the right funding sources to accelerate growth and expansion." },
     { title: "Private Equity", icon: "🤝", desc: "Aligning companies with institutional and private equity partners for strategic growth." },
-    { title: "Strategic Trading", icon: "🌐", desc: "Structured trade facilities (SBLCs, LCs, BGs) to secure transactions and unlock working capital." },
+    { title: "Trade Finance", icon: "🌐", desc: "Trade & Working capital facilities like LC / TR / SBLC / Bill Discounting / BGs" },
     { title: "Mergers & Acquisitions", icon: "🏢", desc: "Assisting owners and investors in navigating complex business acquisitions or exits." },
     { title: "Investor Relations", icon: "💎", desc: "Building long-term, mutually beneficial relationships between businesses and investors." },
   ];
 
   const solutions = [
-    "Working Capital Loans",
-    "Term Loans",
-    "Trade Finance",
-    "CAPEX Financing",
-    "Bank Guarantees"
+    "Banking Solutions – Conventional & Sharia Compliant",
+    "CAPEX Loans & Project Finance",
+    "Trade & Working Capital Finance",
+    "Contracting Finance Bank Guarantees BB/APG/PB",
+    "Real Estate Loans for Construction, Buyout & Refinance",
+    "Debt Restructuring & Loan rescheduling",
+    "Islamic Finance - Ijara, Murabaha & Mudarabah",
+    "Bank Account Opening"
   ];
 
   const process = [
-    { title: "Strategic Business Assessment", desc: "We evaluate your financial health and capital needs." },
-    { title: "Financial Structuring", desc: "Designing a capital structure tailored for resilience and scale." },
-    { title: "Capital Strategy", desc: "Mapping out the optimal mix of debt and equity." },
-    { title: "Bank & Investor Access", desc: "Leveraging our global network of direct banking relationships." },
-    { title: "Execution & Growth Support", desc: "Finalizing transactions and offering ongoing strategic management." },
+    { title: "Engagement & NDA", desc: "We begin with the signing of the advisory agreement and confidentiality documentation." },
+    { title: "Information Review", desc: "Key business, financial, and supporting documents are shared for assessment." },
+    { title: "Evaluation & Structuring", desc: "We analyze the opportunity and determine the most suitable funding strategy." },
+    { title: "Bank & Investor Engagement", desc: "We approach and negotiate with relevant banks and institutional investors." },
+    { title: "Approval & Offer Letter", desc: "Approvals are secured and formal funding terms are issued for review." },
+    { title: "Closing & Fund Disbursement", desc: "We manage execution through closing until the transaction is completed and funds are released." },
   ];
 
   const caseStudies = [
@@ -108,9 +112,9 @@ export default function HomeClient() {
       <section className={styles.hero}>
         <div className={styles.heroBackground}></div>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Strategic Debt <br /> Solutions</h1>
+          <h1 className={styles.heroTitle}>Strategic Funding & <br /> Capital Solutions</h1>
           <p className={styles.heroSubtitle}>
-            Unlocking growth through structured capital. We bridge the gap between ambitious enterprises and global financing markets.
+            Unlocking growth through structured capital and strategic financing. Connecting ambitious enterprises with global investors and financing partners.
           </p>
           <div className={styles.heroButtons}>
             <Link href="/contact" className="btn-secondary" style={{ background: 'var(--secondary)', color: 'white', border: 'none' }}>
@@ -126,9 +130,9 @@ export default function HomeClient() {
       {/* What We Do */}
       <section className="section" style={{ background: 'white' }}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Global Advisory Services</h2>
+          <h2 className={styles.sectionTitle}>Global Financial Advisory</h2>
           <p className={styles.sectionSubtitle}>
-            End-to-end financial and investment solutions tailored for the modern enterprise.
+            End-to-end financing solutions and capital advisory tailored for modern businesses.
           </p>
           <div className={styles.grid}>
             {services.map((service, index) => (
@@ -149,7 +153,7 @@ export default function HomeClient() {
             <div style={{ padding: '40px 0' }}>
               <h2 className={styles.sectionTitle} style={{ textAlign: 'left', marginBottom: '32px' }}>Why Salt Ranges</h2>
               <p className={styles.cardText} style={{ fontSize: '1.2rem', marginBottom: '32px' }}>
-                Delivering bespoke financial strategies with unparalleled institutional expertise and global reach.
+                We deliver strategic capital solutions backed by global access and deep expertise
               </p>
               <ul className={styles.checkList}>
                 <li>
@@ -160,6 +164,15 @@ export default function HomeClient() {
                 </li>
                 <li>
                   <span className={styles.checkIcon}>★</span> Global network of institutional investors
+                </li>
+                <li>
+                  <span className={styles.checkIcon}>★</span> Global Reach – Tie ups with banks, investors, and funding partners worldwide
+                </li>
+                <li>
+                  <span className={styles.checkIcon}>★</span> Financial Expertise – Over 20 years of experience across financing, M&A, and investment solutions
+                </li>
+                <li>
+                  <span className={styles.checkIcon}>★</span> Proven Delivery – Successful execution of complex financial transactions of more that USD 1B
                 </li>
               </ul>
             </div>
@@ -187,7 +200,7 @@ export default function HomeClient() {
           <div className={styles.processSteps}>
             {process.map((step, index) => (
               <div key={index} className={styles.processStep} style={{ borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
-                <div className={styles.stepNumber} style={{ opacity: 0.2 }}>0{index + 1}</div>
+                <div className={styles.stepNumber} style={{ opacity: 0.2 }}>{index + 1 < 10 ? `0${index + 1}` : index + 1}</div>
                 <div className={styles.stepContent}>
                   <h3 style={{ fontSize: '1.4rem' }}>{step.title}</h3>
                   <p style={{ fontSize: '1.05rem' }}>{step.desc}</p>
@@ -198,22 +211,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="section" style={{ background: 'var(--primary)', color: 'white', borderRadius: '48px', margin: '0 20px' }}>
-        <div className="container">
-          <h2 className={styles.sectionTitle} style={{ color: 'white' }}>Institutional Impact</h2>
-          <p className={styles.sectionSubtitle} style={{ color: 'rgba(255,255,255,0.7)' }}>Proven financing transactions delivered across global markets.</p>
-          
-          <div className={styles.grid}>
-            {caseStudies.map((caseStudy, index) => (
-              <div key={index} className={styles.card} style={{ background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <h3 className={styles.cardTitle} style={{ color: 'white' }}>{caseStudy.title}</h3>
-                <p className={styles.cardText} style={{ color: 'rgba(255,255,255,0.8)' }}>{caseStudy.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="container" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
