@@ -43,6 +43,12 @@ export default function Footer() {
           <div className={styles.contactItem}>
             📞 +971 50 210 6095
           </div>
+          <div style={{ marginTop: '15px' }} className={styles.contactItem}>
+            📍 Calgary, Canada
+          </div>
+          <div className={styles.contactItem}>
+            📞 +1 368 993 3609
+          </div>
           <div className={styles.contactItem}>
             ✉️ haroon@salt-ranges.com
           </div>

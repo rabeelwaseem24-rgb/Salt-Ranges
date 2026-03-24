@@ -101,7 +101,7 @@ export default function ContactClient() {
             <div className={styles.infoItem}>
               <div className={styles.infoIcon}>📍</div>
               <div className={styles.infoText}>
-                <h4>Our Office</h4>
+                <h4>Global Head Office</h4>
                 <p>Meydan Free Zone</p>
               </div>
             </div>
@@ -110,6 +110,21 @@ export default function ContactClient() {
               <div className={styles.infoIcon}>📞</div>
               <div className={styles.infoText}>
                 <p>+971 50 210 6095</p>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '30px' }} className={styles.infoItem}>
+              <div className={styles.infoIcon}>📍</div>
+              <div className={styles.infoText}>
+                <h4>Canada Office</h4>
+                <p>Calgary, Canada</p>
+              </div>
+            </div>
+
+            <div className={styles.infoItem}>
+              <div className={styles.infoIcon}>📞</div>
+              <div className={styles.infoText}>
+                <p>+1 368 993 3609</p>
               </div>
             </div>
 

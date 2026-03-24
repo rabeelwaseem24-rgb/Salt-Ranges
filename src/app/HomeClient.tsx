@@ -11,9 +11,101 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function HomeClient() {
   const container = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
+
+    let animationFrameId: number;
+    const resize = () => {
+      if (canvasRef.current) {
+        canvasRef.current.width = canvasRef.current.offsetWidth;
+        canvasRef.current.height = canvasRef.current.offsetHeight;
+      }
+    };
+
+    // Particle Mesh Animation Logic
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        let particles: any[] = [];
+        const particleCount = 80;
+        const connectionDistance = 150;
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+          x: number;
+          y: number;
+          vx: number;
+          vy: number;
+          size: number;
+
+          constructor() {
+            this.x = Math.random() * (canvas?.width || 0);
+            this.y = Math.random() * (canvas?.height || 0);
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.size = 2;
+          }
+
+          update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (canvas) {
+              if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+              if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+          }
+
+          draw() {
+            if (ctx) {
+              ctx.beginPath();
+              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(99, 91, 255, 0.5)';
+              ctx.fill();
+            }
+          }
+        }
+
+        const init = () => {
+          particles = [];
+          for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+          }
+        };
+
+        const animate = () => {
+          if (!ctx || !canvas) return;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          particles.forEach(p => {
+            p.update();
+            p.draw();
+          });
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < connectionDistance) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = `rgba(99, 91, 255, ${1 - dist / connectionDistance})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+              }
+            }
+          }
+          animationFrameId = requestAnimationFrame(animate);
+        };
+
+        init();
+        animate();
+      }
+    }
 
     mm.add("(min-width: 769px)", () => {
       // Desktop Hero
@@ -21,12 +113,12 @@ export default function HomeClient() {
       tl.fromTo(`.${styles.heroTitle}`, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: 'power4.out' })
         .fromTo(`.${styles.heroSubtitle}`, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: 'power4.out' }, "-=0.8")
         .fromTo(`.${styles.heroButtons}`, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: 'power4.out' }, "-=0.8");
-      
+
       // Desktop Scroll Animations
       gsap.utils.toArray('.section').forEach((section: any) => {
         const titles = section.querySelectorAll('.sectionTitle, .sectionSubtitle, h2, p');
         if (titles.length > 0) {
-          gsap.fromTo(titles, { y: 40, opacity: 0 }, { 
+          gsap.fromTo(titles, { y: 40, opacity: 0 }, {
             y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: section, start: 'top 85%' }
           });
         }
@@ -35,17 +127,17 @@ export default function HomeClient() {
       // Desktop Cards
       gsap.utils.toArray(`.${styles.grid}`).forEach((grid: any) => {
         if (grid.children.length > 0) {
-          gsap.fromTo(grid.children, { y: 50, opacity: 0 }, { 
+          gsap.fromTo(grid.children, { y: 50, opacity: 0 }, {
             y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: grid, start: 'top 85%' }
           });
         }
       });
 
-      gsap.fromTo(`.${styles.processStep}`, { x: -50, opacity: 0 }, { 
+      gsap.fromTo(`.${styles.processStep}`, { x: -50, opacity: 0 }, {
         x: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: 'power3.out', scrollTrigger: { trigger: `.${styles.processSteps}`, start: 'top 80%' }
       });
 
-      gsap.fromTo(`.${styles.ctaSection}`, { scale: 0.95, opacity: 0 }, { 
+      gsap.fromTo(`.${styles.ctaSection}`, { scale: 0.95, opacity: 0 }, {
         scale: 1, opacity: 1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: `.${styles.ctaSection}`, start: 'top 85%' }
       });
     });
@@ -56,11 +148,11 @@ export default function HomeClient() {
       tl.fromTo(`.${styles.heroTitle}`, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' })
         .fromTo(`.${styles.heroSubtitle}`, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, "-=0.5")
         .fromTo(`.${styles.heroButtons}`, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, "-=0.5");
-      
+
       // Mobile Scroll (Precise viewport feel)
       gsap.utils.toArray('.section').forEach((section: any) => {
         const check = section.querySelectorAll('h2, p, .card, .processStep, .splitGrid > div');
-        if(check.length > 0) {
+        if (check.length > 0) {
           gsap.fromTo(check, { opacity: 0, y: 30 }, {
             opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out', scrollTrigger: { trigger: section, start: 'top 85%' }
           });
@@ -68,7 +160,13 @@ export default function HomeClient() {
       });
     });
 
-    return () => mm.revert();
+    return () => {
+      mm.revert();
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', resize);
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, { scope: container });
 
   const services = [
@@ -110,6 +208,7 @@ export default function HomeClient() {
     <div className={styles.main} ref={container}>
       {/* Hero Section */}
       <section className={styles.hero}>
+        <canvas ref={canvasRef} className={styles.heroCanvas}></canvas>
         <div className={styles.heroBackground}></div>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Strategic Funding & <br /> Capital Solutions</h1>
@@ -157,15 +256,6 @@ export default function HomeClient() {
               </p>
               <ul className={styles.checkList}>
                 <li>
-                  <span className={styles.checkIcon}>★</span> Direct Tier-1 banking relationships
-                </li>
-                <li>
-                  <span className={styles.checkIcon}>★</span> Bespoke corporate finance expertise
-                </li>
-                <li>
-                  <span className={styles.checkIcon}>★</span> Global network of institutional investors
-                </li>
-                <li>
                   <span className={styles.checkIcon}>★</span> Global Reach – Tie ups with banks, investors, and funding partners worldwide
                 </li>
                 <li>
@@ -176,7 +266,7 @@ export default function HomeClient() {
                 </li>
               </ul>
             </div>
-            
+
             <div className={styles.card} style={{ background: 'var(--primary)', color: 'white', border: 'none' }}>
               <h3 className={styles.cardTitle} style={{ color: 'white', fontSize: '1.8rem' }}>Banking Solutions</h3>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px', marginTop: '32px' }}>
@@ -196,7 +286,7 @@ export default function HomeClient() {
         <div className="container">
           <h2 className={styles.sectionTitle}>The Execution Roadmap</h2>
           <p className={styles.sectionSubtitle}>A structured, strategic approach to securing mission-critical capital.</p>
-          
+
           <div className={styles.processSteps}>
             {process.map((step, index) => (
               <div key={index} className={styles.processStep} style={{ borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
