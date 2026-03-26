@@ -72,10 +72,23 @@ export default function ContactClient() {
     window.location.href = `mailto:haroon@salt-ranges.com?subject=${subject}&body=${body}`;
   };
 
-  const caseStudies = [
-    { title: "$2M Working Capital Financing", desc: "Secured for a rapidly growing trading company, allowing them to expand operations and handle larger transaction volumes seamlessly." },
-    { title: "Commercial Property Acquisition", desc: "Complex financing structured for a leading real estate developer to acquire prime commercial property in the UAE." },
-    { title: "Strategic Debt Restructuring", desc: "Complete financial reorganization and debt restructuring for a major manufacturing business, improving cash flow by 40%." },
+  const dealPortfolio = [
+    { 
+      title: "Oil & Gas | $300M+", 
+      desc: "Structured cross-border working capital solutions for a major energy players. Implemented ring-fenced transaction structures to secure substantial credit facilities, across 5 international markets." 
+    },
+    { 
+      title: "Greenfield Project Funding | $200M+", 
+      desc: "Provided end-to-end financing for industrial and mixed-use real estate projects in the UAE and KSA including comprehensive advisory from feasibility to disbursement. Structured integrated financing packages combining term loans with working capital." 
+    },
+    { 
+      title: "Healthcare & Education Expansion | $200M+", 
+      desc: "Arranged growth financing and debt consolidation for regional healthcare and education providers. Structured innovative waterfall repayment mechanisms on receivable financing using discounting / factoring tools. Facilitated expansion of 10+ facilities across the region." 
+    },
+    { 
+      title: "Real Estate Portfolio Solutions | $400M+", 
+      desc: "Executed complex refinancing and buyout transactions for premium GCC real estate assets. Helped number of real estate developers grow in the UAE market by arranging Real Estate Regulatory Authority (RERA) guarantees. Created innovative financing structures to support development projects by discounting receivables of pre sold real estate inventory which enabled the developers to offer post handover payment plans." 
+    },
   ];
 
   return (
@@ -102,7 +115,7 @@ export default function ContactClient() {
               <div className={styles.infoIcon}>📍</div>
               <div className={styles.infoText}>
                 <h4>Global Head Office</h4>
-                <p>Meydan Free Zone</p>
+                <p>Meydan Free Zone Dubai</p>
               </div>
             </div>
 
@@ -138,12 +151,12 @@ export default function ContactClient() {
           </div>
 
           <div style={{ marginTop: '60px' }}>
-            <h2 className={styles.contactInfoTitle}>Proven Results</h2>
+            <h2 className={styles.contactInfoTitle}>Deal Portfolio Highlight</h2>
             <div className={styles.caseStudiesList}>
-              {caseStudies.map((cs, idx) => (
+              {dealPortfolio.map((deal, idx) => (
                 <div key={idx} className={styles.caseStudyCard}>
-                  <h3 className={styles.caseStudyTitle}>{cs.title}</h3>
-                  <p className={styles.caseStudyDesc}>{cs.desc}</p>
+                  <h3 className={styles.caseStudyTitle}>{deal.title}</h3>
+                  <p className={styles.caseStudyDesc}>{deal.desc}</p>
                 </div>
               ))}
             </div>

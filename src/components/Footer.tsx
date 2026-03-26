@@ -38,7 +38,7 @@ export default function Footer() {
         <div className={styles.column}>
           <h3 className={styles.heading}>Contact Us</h3>
           <div className={styles.contactItem}>
-            📍 Meydan Free Zone
+            📍 Meydan Free Zone Dubai
           </div>
           <div className={styles.contactItem}>
             📞 +971 50 210 6095
@@ -62,7 +62,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/salt-ranges/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               in
             </a>
-            <a href="https://www.instagram.com/saltranges/?hl=en" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <a href="https://www.instagram.com/saltranges?utm_source=qr" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
               ig
             </a>
           </div>

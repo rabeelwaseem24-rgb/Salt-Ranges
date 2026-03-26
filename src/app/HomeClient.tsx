@@ -198,10 +198,23 @@ export default function HomeClient() {
     { title: "Closing & Fund Disbursement", desc: "We manage execution through closing until the transaction is completed and funds are released." },
   ];
 
-  const caseStudies = [
-    { title: "$2M Working Capital", desc: "Financing for a major multinational Trading Company." },
-    { title: "Commercial Property", desc: "Acquisition Financing for a leading real UAE estate developer." },
-    { title: "Debt Restructuring", desc: "Strategic debt restructuring for a large manufacturing business." },
+  const dealPortfolio = [
+    { 
+      title: "Oil & Gas | $300M+", 
+      desc: "Structured cross-border working capital solutions for a major energy players. Implemented ring-fenced transaction structures to secure substantial credit facilities, across 5 international markets." 
+    },
+    { 
+      title: "Greenfield Project Funding | $200M+", 
+      desc: "Provided end-to-end financing for industrial and mixed-use real estate projects in the UAE and KSA including comprehensive advisory from feasibility to disbursement. Structured integrated financing packages combining term loans with working capital." 
+    },
+    { 
+      title: "Healthcare & Education Expansion | $200M+", 
+      desc: "Arranged growth financing and debt consolidation for regional healthcare and education providers. Structured innovative waterfall repayment mechanisms on receivable financing using discounting / factoring tools. Facilitated expansion of 10+ facilities across the region." 
+    },
+    { 
+      title: "Real Estate Portfolio Solutions | $400M+", 
+      desc: "Executed complex refinancing and buyout transactions for premium GCC real estate assets. Helped number of real estate developers grow in the UAE market by arranging Real Estate Regulatory Authority (RERA) guarantees. Created innovative financing structures to support development projects by discounting receivables of pre sold real estate inventory which enabled the developers to offer post handover payment plans." 
+    },
   ];
 
   return (
@@ -301,6 +314,26 @@ export default function HomeClient() {
         </div>
       </section>
 
+
+      {/* Deal Portfolio Highlight */}
+      <section className="section" style={{ background: '#f8fafc' }}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Deal Portfolio Highlight</h2>
+          <p className={styles.sectionSubtitle}>
+            A showcase of our successfully executed transactions and structured financial solutions across global markets.
+          </p>
+          <div className={styles.grid} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+            {dealPortfolio.map((deal, index) => (
+              <div key={index} className={styles.card} style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
+                <h3 className={styles.cardTitle} style={{ color: 'var(--primary)', borderBottom: '2px solid var(--accent)', paddingBottom: '12px', marginBottom: '24px' }}>
+                  {deal.title}
+                </h3>
+                <p className={styles.cardText}>{deal.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="container" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
