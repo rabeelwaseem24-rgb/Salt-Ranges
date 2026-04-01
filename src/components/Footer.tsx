@@ -71,6 +71,9 @@ export default function Footer() {
       </div>
 
       <div className={`container ${styles.bottomBar}`}>
+        <p style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '15px', textAlign: 'center', lineHeight: '1.5' }}>
+          Salt Ranges LLC FZ provides financial advisory and consulting services only. The firm does not provide regulated investment, brokerage, or securities services in any jurisdiction.
+        </p>
         <p>&copy; {currentYear} Salt Ranges. All rights reserved.</p>
       </div>
     </footer>

@@ -170,30 +170,30 @@ export default function HomeClient() {
   }, { scope: container });
 
   const services = [
-    { title: "Debt Financing", icon: "🏛️", desc: "Secure Bank financing for your business needs to grow, expand, and execute—without giving up equity." },
-    { title: "Capital Raising", icon: "📈", desc: "Connecting businesses with the right funding sources to accelerate growth and expansion." },
-    { title: "Private Equity", icon: "🤝", desc: "Aligning companies with institutional and private equity partners for strategic growth." },
-    { title: "Trade Finance", icon: "🌐", desc: "Trade & Working capital facilities like LC / TR / SBLC / Bill Discounting / BGs" },
-    { title: "Mergers & Acquisitions", icon: "🏢", desc: "Assisting owners and investors in navigating complex business acquisitions or exits." },
-    { title: "Investor Relations", icon: "💎", desc: "Building long-term, mutually beneficial relationships between businesses and investors." },
+    { title: "Debt Financing", icon: "🏛️", desc: "Advising on bank financing strategies to support business growth, expansion, and execution—without giving up equity." },
+    { title: "Capital Raising", icon: "📈", desc: "Advising businesses on capital strategy and preparation to engage with funding sources for growth and expansion." },
+    { title: "Private Equity", icon: "🤝", desc: "Supporting companies in preparing for engagement with institutional and private equity partners for strategic growth." },
+    { title: "Trade Finance", icon: "🌐", desc: "Advising clients on trade and working capital financing structures, including LC, TR, SBLC, bill discounting, and BGs." },
+    { title: "Mergers & Acquisitions", icon: "🏢", desc: "Providing advisory support to owners and investors navigating complex business acquisitions or exits." },
+    { title: "Investor Relations", icon: "💎", desc: "Advising businesses on building long-term, mutually beneficial relationships with investors." },
   ];
 
   const solutions = [
     "Banking Solutions – Conventional & Sharia Compliant",
-    "CAPEX Loans & Project Finance",
+    "Advisory on CAPEX Loans & Project Finance",
     "Trade & Working Capital Finance",
     "Contracting Finance Bank Guarantees BB/APG/PB",
     "Real Estate Loans for Construction, Buyout & Refinance",
     "Debt Restructuring & Loan rescheduling",
-    "Islamic Finance - Ijara, Murabaha & Mudarabah",
-    "Bank Account Opening"
+    "Advisory on Islamic Finance – Ijara, Murabaha & Mudarabah",
+    "Advisory on Bank Account Opening Processes"
   ];
 
   const process = [
     { title: "Engagement & NDA", desc: "We begin with the signing of the advisory agreement and confidentiality documentation." },
     { title: "Information Review", desc: "Key business, financial, and supporting documents are shared for assessment." },
     { title: "Evaluation & Structuring", desc: "We analyze the opportunity and determine the most suitable funding strategy." },
-    { title: "Bank & Investor Engagement", desc: "We approach and negotiate with relevant banks and institutional investors." },
+    { title: "Bank & Investor Engagement", desc: "We provide advisory support for engagement with relevant banks and institutional investors." },
     { title: "Approval & Offer Letter", desc: "Approvals are secured and formal funding terms are issued for review." },
     { title: "Closing & Fund Disbursement", desc: "We manage execution through closing until the transaction is completed and funds are released." },
   ];
@@ -201,19 +201,19 @@ export default function HomeClient() {
   const dealPortfolio = [
     { 
       title: "Oil & Gas | $300M+", 
-      desc: "Structured cross-border working capital solutions for a major energy players. Implemented ring-fenced transaction structures to secure substantial credit facilities, across 5 international markets." 
+      desc: "Advised on structured cross-border working capital solutions for major energy players. Provided advisory support on ring-fenced transaction structures to secure substantial credit facilities across 5 international markets." 
     },
     { 
       title: "Greenfield Project Funding | $200M+", 
-      desc: "Provided end-to-end financing for industrial and mixed-use real estate projects in the UAE and KSA including comprehensive advisory from feasibility to disbursement. Structured integrated financing packages combining term loans with working capital." 
+      desc: "Advised on end-to-end financing for industrial and mixed-use real estate projects in the UAE and KSA, including comprehensive advisory from feasibility to disbursement. Provided advisory support in structuring integrated financing packages combining term loans with working capital." 
     },
     { 
       title: "Healthcare & Education Expansion | $200M+", 
-      desc: "Arranged growth financing and debt consolidation for regional healthcare and education providers. Structured innovative waterfall repayment mechanisms on receivable financing using discounting / factoring tools. Facilitated expansion of 10+ facilities across the region." 
+      desc: "Advised on growth financing and debt consolidation for regional healthcare and education providers. Provided advisory support on innovative waterfall repayment mechanisms on receivable financing using discounting/factoring tools. Advised on the expansion of 10+ facilities across the region." 
     },
     { 
       title: "Real Estate Portfolio Solutions | $400M+", 
-      desc: "Executed complex refinancing and buyout transactions for premium GCC real estate assets. Helped number of real estate developers grow in the UAE market by arranging Real Estate Regulatory Authority (RERA) guarantees. Created innovative financing structures to support development projects by discounting receivables of pre sold real estate inventory which enabled the developers to offer post handover payment plans." 
+      desc: "Advised on complex refinancing and buyout transactions for premium GCC real estate assets. Provided advisory support to real estate developers growing in the UAE market by advising on Real Estate Regulatory Authority (RERA) guarantees. Advised on innovative financing structures to support development projects by discounting receivables of pre-sold real estate inventory." 
     },
   ];
 
@@ -226,7 +226,7 @@ export default function HomeClient() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Strategic Funding & <br /> Capital Solutions</h1>
           <p className={styles.heroSubtitle}>
-            Unlocking growth through structured capital and strategic financing. Connecting ambitious enterprises with global investors and financing partners.
+            Unlocking growth through structured capital and strategic advisory. Supporting ambitious enterprises in preparing for investor engagement and financing opportunities.
           </p>
           <div className={styles.heroButtons}>
             <Link href="/contact" className="btn-secondary" style={{ background: 'var(--secondary)', color: 'white', border: 'none' }}>
@@ -244,7 +244,7 @@ export default function HomeClient() {
         <div className="container">
           <h2 className={styles.sectionTitle}>Global Financial Advisory</h2>
           <p className={styles.sectionSubtitle}>
-            End-to-end financing solutions and capital advisory tailored for modern businesses.
+            End-to-end financial advisory and capital strategy support tailored for modern businesses.
           </p>
           <div className={styles.grid}>
             {services.map((service, index) => (
@@ -265,7 +265,7 @@ export default function HomeClient() {
             <div style={{ padding: '40px 0' }}>
               <h2 className={styles.sectionTitle} style={{ textAlign: 'left', marginBottom: '32px' }}>Why Salt Ranges</h2>
               <p className={styles.cardText} style={{ fontSize: '1.2rem', marginBottom: '32px' }}>
-                We deliver strategic capital solutions backed by global access and deep expertise
+                We deliver strategic financial advisory backed by global access and deep expertise
               </p>
               <ul className={styles.checkList}>
                 <li>
